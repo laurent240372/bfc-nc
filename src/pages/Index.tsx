@@ -18,11 +18,11 @@ import imgRegie from "@/assets/modules/regie.jpg";
 import imgFacturationEnfance from "@/assets/modules/facturation-enfance.jpg";
 
 const financeModules = [
-  { title: "Comptabilité", image: imgComptabilite, desc: "Budget, mandatement, titres de recettes et suivi financier" },
-  { title: "Gestion des biens", image: imgGestionBiens, desc: "Patrimoine, inventaire et suivi des immobilisations" },
-  { title: "Tableaux de bord", image: imgTableauxBord, desc: "Indicateurs, reporting et pilotage en temps réel" },
-  { title: "Emprunts & dette", image: imgEmprunts, desc: "Simulation, suivi des échéances et gestion de la dette" },
-  { title: "Paie", image: imgPaie, desc: "Bulletins de paie, charges sociales et gestion RH" },
+  { title: "Comptabilité", image: imgComptabilite, desc: "Gestion en temps réel des finances, conforme aux nomenclatures M14, M22, M4x et M1-5-7. Budget, mandatement, titres de recettes et suivi financier complet." },
+  { title: "Gestion des biens", image: imgGestionBiens, desc: "Suivi complet du patrimoine mobilier et immobilier de la collectivité. Gestion des amortissements, inventaire et transmission à la Trésorerie." },
+  { title: "Tableaux de bord", image: imgTableauxBord, desc: "Indicateurs stratégiques et pluriannuels pour piloter votre collectivité. Analyse des données financières et suivi des ratios." },
+  { title: "Emprunts & dette", image: imgEmprunts, desc: "Gestion et simulation des emprunts selon les normes M14, M22, M4x et M1-5-7. Suivi de l'endettement et analyse de son évolution." },
+  { title: "Paie", image: imgPaie, desc: "Gestion complète des agents : bulletins de salaire, congés et carrière. Éditions réglementaires (CAFAT, mutuelle, DADS…) et mandatement automatique." },
 ];
 
 const administresModules = [
@@ -138,9 +138,9 @@ const Index = () => (
                   <div className="aspect-[3/2] overflow-hidden">
                     <img src={m.image} alt={m.title} loading="lazy" width={768} height={512} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                   </div>
-                  <div className="p-4">
-                    <h4 className="font-bold text-sm text-foreground">{m.title}</h4>
-                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
+                   <div className="p-4">
+                    <h4 className="font-bold text-sm text-foreground mb-1.5">{m.title}</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
                   </div>
                 </motion.div>
               ))}
