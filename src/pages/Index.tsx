@@ -5,26 +5,33 @@ import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import dashboardHero from "@/assets/dashboard-hero.jpg";
 
-const fadeUp = {
-  initial: { opacity: 0, y: 30 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.5 },
-};
+import imgComptabilite from "@/assets/modules/comptabilite.jpg";
+import imgGestionBiens from "@/assets/modules/gestion-biens.jpg";
+import imgTableauxBord from "@/assets/modules/tableaux-bord.jpg";
+import imgEmprunts from "@/assets/modules/emprunts.jpg";
+import imgPaie from "@/assets/modules/paie.jpg";
+import imgEtatCivil from "@/assets/modules/etat-civil.jpg";
+import imgEtatCivilCoutumier from "@/assets/modules/etat-civil-coutumier.jpg";
+import imgElections from "@/assets/modules/elections.jpg";
+import imgPopulation from "@/assets/modules/population.jpg";
+import imgRegie from "@/assets/modules/regie.jpg";
+import imgFacturationEnfance from "@/assets/modules/facturation-enfance.jpg";
 
-const solutions = [
-  {
-    icon: Calculator,
-    title: "Comptabilité & Finance",
-    description: "Une suite complète pour piloter les finances de votre collectivité : budget, mandatement, recettes, emprunts, paie et suivi du patrimoine. Des outils conformes aux normes en vigueur et adaptés aux besoins des collectivités locales.",
-    link: "/logiciels/comptabilite",
-  },
-  {
-    icon: Users,
-    title: "Gestion des administrés",
-    description: "État civil, élections, cimetières et gestion de la population avec un outil moderne et intuitif.",
-    link: "/logiciels/administres",
-  },
+const financeModules = [
+  { title: "Comptabilité", image: imgComptabilite, desc: "Budget, mandatement, titres de recettes et suivi financier" },
+  { title: "Gestion des biens", image: imgGestionBiens, desc: "Patrimoine, inventaire et suivi des immobilisations" },
+  { title: "Tableaux de bord", image: imgTableauxBord, desc: "Indicateurs, reporting et pilotage en temps réel" },
+  { title: "Emprunts & dette", image: imgEmprunts, desc: "Simulation, suivi des échéances et gestion de la dette" },
+  { title: "Paie", image: imgPaie, desc: "Bulletins de paie, charges sociales et gestion RH" },
+];
+
+const administresModules = [
+  { title: "État civil droit commun", image: imgEtatCivil, desc: "Naissances, mariages, décès et actes officiels" },
+  { title: "État civil coutumier", image: imgEtatCivilCoutumier, desc: "Registres coutumiers adaptés au droit local" },
+  { title: "Élections", image: imgElections, desc: "Listes électorales, scrutins et résultats" },
+  { title: "Population", image: imgPopulation, desc: "Fichier population et gestion des administrés" },
+  { title: "Régie", image: imgRegie, desc: "Encaissements, quittances et suivi des paiements" },
+  { title: "Facturation enfance", image: imgFacturationEnfance, desc: "Cantine, périscolaire et activités enfance" },
 ];
 
 const avantages = [
