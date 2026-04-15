@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logoBfc from "@/assets/logo-bfc.png";
 
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground">
     <div className="container py-16">
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent">
-              <span className="text-sm font-bold text-accent-foreground">BFC</span>
-            </div>
-            <span className="text-lg font-heading font-bold">BFC NC</span>
+          <div className="mb-4">
+            <img src={logoBfc} alt="BFC Nouvelle-Calédonie" className="h-10 w-auto brightness-0 invert" />
           </div>
           <p className="text-sm text-primary-foreground/70 leading-relaxed">
             Éditeur de logiciels pour les collectivités de Nouvelle-Calédonie. Plus de 20 ans d'expertise au service du secteur public.

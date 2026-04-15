@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
+import logoBfc from "@/assets/logo-bfc.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
@@ -29,13 +30,8 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-card/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-gradient">
-            <span className="text-sm font-bold text-primary-foreground">BFC</span>
-          </div>
-          <span className="text-lg font-heading font-bold text-foreground">
-            BFC <span className="text-accent">Nouvelle-Calédonie</span>
-          </span>
+        <Link to="/" className="flex items-center">
+          <img src={logoBfc} alt="BFC Nouvelle-Calédonie" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop nav */}
