@@ -145,8 +145,8 @@ const Index = () => (
                 </motion.div>
               ))}
             </div>
-            <Link to="/logiciels/comptabilite" className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
-              Découvrir le module Finance <ChevronRight className="h-4 w-4" />
+            <Link to="/logiciels" className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+              Voir tous les modules Finance <ChevronRight className="h-4 w-4" />
             </Link>
           </div>
         </motion.div>
