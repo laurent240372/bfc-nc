@@ -34,6 +34,13 @@ const administresModules = [
   { title: "Facturation enfance", image: imgFacturationEnfance, desc: "Cantine, périscolaire et activités enfance" },
 ];
 
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5 },
+};
+
 const avantages = [
   { icon: Shield, title: "Sécurité", desc: "Données protégées et conformes aux réglementations locales" },
   { icon: TrendingUp, title: "Performance", desc: "Solutions optimisées pour des traitements rapides et fiables" },
