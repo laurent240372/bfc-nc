@@ -8,7 +8,7 @@ const Footer = () => (
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="mb-4">
-            <img src={logoBfc} alt="BFC Nouvelle-Calédonie" className="h-10 w-auto brightness-0 invert" />
+            <img src={logoBfc} alt="BFC Nouvelle-Calédonie" className="h-10 w-auto" />
           </div>
           <p className="text-sm text-primary-foreground/70 leading-relaxed">
             Éditeur de logiciels pour les collectivités de Nouvelle-Calédonie. Plus de 20 ans d'expertise au service du secteur public.
