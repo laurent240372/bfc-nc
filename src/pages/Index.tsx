@@ -16,7 +16,7 @@ const solutions = [
   {
     icon: Calculator,
     title: "Comptabilité & Finance",
-    description: "Gestion budgétaire complète, mandatement, titres de recettes et suivi financier pour les collectivités.",
+    description: "Une suite complète pour piloter les finances de votre collectivité : budget, mandatement, recettes, emprunts, paie et suivi du patrimoine. Des outils conformes aux normes en vigueur et adaptés aux besoins des collectivités locales.",
     link: "/logiciels/comptabilite",
   },
   {
