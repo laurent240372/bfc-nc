@@ -31,7 +31,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-border bg-card/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center">
-          <img src={logoBfc} alt="BFC Nouvelle-Calédonie" className="h-10 w-auto" />
+          <img src={logoBfc} alt="BFC Nouvelle-Calédonie" className="h-12 w-auto" />
         </Link>
 
         {/* Desktop nav */}
