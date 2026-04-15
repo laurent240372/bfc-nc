@@ -109,28 +109,85 @@ const Index = () => (
       <div className="container">
         <SectionHeading
           badge="Nos solutions"
-          title="Logiciels adaptés à vos besoins"
+          title="Une suite logicielle métier complète"
           description="Des outils conçus spécifiquement pour répondre aux exigences des collectivités de Nouvelle-Calédonie."
         />
-        <div className="grid gap-8 md:grid-cols-2">
-          {solutions.map((s, i) => (
-            <motion.div key={s.title} {...fadeUp} transition={{ duration: 0.5, delay: i * 0.1 }}>
-              <Link
-                to={s.link}
-                className="group block rounded-xl border border-border bg-card p-8 card-hover"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-light">
-                  <s.icon className="h-6 w-6 text-accent" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">{s.title}</h3>
-                <p className="mt-2 text-muted-foreground leading-relaxed">{s.description}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent">
-                  En savoir plus <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </span>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
+
+        {/* Comptabilité & Finance */}
+        <motion.div {...fadeUp} className="mb-16">
+          <div className="rounded-2xl border border-border bg-card p-8 md:p-10">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-light">
+                <Calculator className="h-6 w-6 text-accent" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground">Comptabilité & Finance</h3>
+                <p className="text-muted-foreground text-sm">Une gamme complète d'outils pour la gestion financière des collectivités locales, conformes à la réglementation en vigueur.</p>
+              </div>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-6">
+              {financeModules.map((m, i) => (
+                <motion.div
+                  key={m.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                  className="group rounded-xl border border-border bg-background overflow-hidden card-hover cursor-pointer"
+                >
+                  <div className="aspect-[3/2] overflow-hidden">
+                    <img src={m.image} alt={m.title} loading="lazy" width={768} height={512} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                  </div>
+                  <div className="p-4">
+                    <h4 className="font-bold text-sm text-foreground">{m.title}</h4>
+                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <Link to="/logiciels/comptabilite" className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+              Découvrir le module Finance <ChevronRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </motion.div>
+
+        {/* Gestion des administrés */}
+        <motion.div {...fadeUp}>
+          <div className="rounded-2xl border border-border bg-card p-8 md:p-10">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-light">
+                <Users className="h-6 w-6 text-accent" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground">Gestion des administrés</h3>
+                <p className="text-muted-foreground text-sm">Des applications de gestion et des solutions Internet articulées autour d'une base administrés unique.</p>
+              </div>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-6">
+              {administresModules.map((m, i) => (
+                <motion.div
+                  key={m.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: i * 0.08 }}
+                  className="group rounded-xl border border-border bg-background overflow-hidden card-hover cursor-pointer"
+                >
+                  <div className="aspect-[3/2] overflow-hidden">
+                    <img src={m.image} alt={m.title} loading="lazy" width={768} height={512} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                  </div>
+                  <div className="p-4">
+                    <h4 className="font-bold text-sm text-foreground">{m.title}</h4>
+                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <Link to="/logiciels/administres" className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
+              Découvrir le module Administrés <ChevronRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </motion.div>
       </div>
     </section>
 
