@@ -62,110 +62,113 @@ const integrationCards = [
   {
     icon: Layers,
     title: "Intégration complète",
-    desc: "Paie, emprunts, amortissements, facturation et gestion des biens interfacés nativement.",
+    desc: "Paie, emprunts, amortissements, facturation et gestion des biens interfacés nativement. Mandatement automatique depuis chaque module.",
   },
   {
     icon: LayoutGrid,
-    title: "Ergonomie unifiée",
-    desc: "Interface commune à tous les modules pour une prise en main immédiate.",
+    title: "Multi-nomenclatures",
+    desc: "Compatible M14, M22, M41 à M49 et M52. Prise en charge native de toutes les nomenclatures budgétaires des collectivités.",
   },
   {
     icon: RefreshCw,
-    title: "Traitements partagés",
-    desc: "Mandatement automatique, écritures croisées et consolidation en temps réel.",
+    title: "Pluriannualité AP/CP & AE/CP",
+    desc: "Gestion des autorisations de programme, autorisations d'engagement, crédits de paiement et projections multi-exercices.",
   },
   {
     icon: TrendingUp,
-    title: "Efficacité globale",
-    desc: "Gain de temps sur l'ensemble de la chaîne financière grâce à l'automatisation.",
+    title: "Chaîne financière automatisée",
+    desc: "De l'engagement à la liquidation, mandatement et émission des titres de recettes : chaque étape est tracée et automatisée.",
   },
 ];
 
 const dematItems = [
   { icon: Send, label: "Protocole d'Échange Standard (PES v2)" },
-  { icon: FileSignature, label: "Signature électronique" },
-  { icon: Stamp, label: "Parapheur électronique" },
-  { icon: FileText, label: "Pièces jointes numérisées" },
-  { icon: Link2, label: "Télétransmission sécurisée" },
-  { icon: Globe, label: "Web-services documentés" },
+  { icon: FileSignature, label: "Signature & certification électronique" },
+  { icon: Stamp, label: "Parapheur électronique intégré" },
+  { icon: FileText, label: "Pièces justificatives numérisées" },
+  { icon: Link2, label: "Télétransmission sécurisée vers la Trésorerie" },
+  { icon: Globe, label: "Web-services & API documentés" },
 ];
 
 const controleItems = [
-  { icon: ShieldCheck, label: "Centre de contrôle intégré" },
-  { icon: Scale, label: "Contrôle des seuils de marchés" },
-  { icon: Landmark, label: "Gestion des dépôts de garantie" },
-  { icon: DollarSign, label: "Suivi des disponibilités" },
-  { icon: Clock, label: "Délais de paiement réglementaires" },
-  { icon: RefreshCw, label: "Mises à jour réglementaires automatiques" },
-  { icon: AlertTriangle, label: "Calcul des intérêts moratoires" },
-  { icon: BookOpen, label: "Plan de compte à jour" },
-  { icon: FileBarChart, label: "Maquettes budgétaires officielles" },
-  { icon: Award, label: "Éditions FCTVA conformes" },
+  { icon: ShieldCheck, label: "Centre de contrôle intégré (pré-mandatement)" },
+  { icon: Scale, label: "Contrôle automatique des seuils de marchés publics" },
+  { icon: Landmark, label: "Gestion des dépôts de garantie & retenues" },
+  { icon: DollarSign, label: "Suivi des disponibilités et de la trésorerie" },
+  { icon: Clock, label: "Délais de paiement réglementaires & suivi automatique" },
+  { icon: RefreshCw, label: "Conformité réglementaire automatique (M14, M22, M4x, M52)" },
+  { icon: AlertTriangle, label: "Calcul automatique des intérêts moratoires" },
+  { icon: BookOpen, label: "Plan de comptes officiel mis à jour automatiquement" },
+  { icon: FileBarChart, label: "Maquettes budgétaires officielles (BP, BS, CA, DM)" },
+  { icon: Award, label: "Éditions FCTVA conformes & déclarations automatisées" },
 ];
 
 const pilotageBlocks = [
   {
     title: "Vision financière",
     items: [
-      "Situation financière globale en temps réel",
-      "Compte de résultat & états budgétaires personnalisés",
-      "Historiques pluriannuels complets",
+      "Situation financière globale en temps réel (dépenses, recettes, RAR)",
+      "Compte de résultat, compte administratif & états budgétaires personnalisés",
+      "Projections pluriannuelles AP/CP et AE/CP",
+      "Historiques pluriannuels et ratios financiers",
     ],
   },
   {
-    title: "Organisation & workflow",
+    title: "Workflows & validation",
     items: [
-      "Profils utilisateurs et droits d'accès",
-      "Workflow de validation multi-niveaux",
-      "Circuits de certification paramétrables",
+      "Workflow de validation des achats et des engagements",
+      "Circuits de certification des factures paramétrables",
+      "Profils utilisateurs et droits d'accès par service",
+      "Visa électronique multi-niveaux",
     ],
   },
   {
     title: "Suivi opérationnel",
     items: [
-      "Préparation budgétaire collaborative",
-      "Suivi par gestionnaire ou service",
-      "Gestion des commandes et fournisseurs",
-      "Traçabilité complète des opérations",
+      "Préparation budgétaire collaborative (BP, BS, DM)",
+      "Suivi par gestionnaire, service ou programme",
+      "Gestion analytique multi-niveaux et multi-imputation",
+      "Gestion des tiers pluri-budgétaire et multi-collectivité",
+      "Traçabilité complète de chaque opération",
     ],
   },
 ];
 
 const usageItems = [
-  { icon: Zap, label: "Prise en main rapide" },
-  { icon: MousePointerClick, label: "Assistants et cycles de gestion guidés" },
-  { icon: CalendarClock, label: "Procédures de fin d'année automatisées" },
-  { icon: Keyboard, label: "Saisie au kilomètre & raccourcis clavier" },
-  { icon: ClipboardList, label: "Modèles d'engagements et de mandats" },
-  { icon: StickyNote, label: "Mémos, alertes et planification" },
-  { icon: Bell, label: "Notifications et rappels automatiques" },
-  { icon: Eye, label: "Consultation immédiate des restes à réaliser" },
+  { icon: Zap, label: "Prise en main rapide, interface intuitive" },
+  { icon: MousePointerClick, label: "Assistants et cycles de gestion guidés pas à pas" },
+  { icon: CalendarClock, label: "Procédures de fin d'année et rattachements automatisés" },
+  { icon: Keyboard, label: "Saisie au kilomètre, raccourcis clavier & navigation rapide" },
+  { icon: ClipboardList, label: "Modèles d'engagements, de mandats et de titres" },
+  { icon: StickyNote, label: "Mémos, alertes contextuelles et planification" },
+  { icon: Bell, label: "Rappels automatiques (délais, échéances, seuils)" },
+  { icon: Eye, label: "Consultation immédiate des RAR et restes à réaliser" },
 ];
 
 const fonctionnalites = [
   "Gestion analytique multi-niveaux",
-  "Historiques synthétiques",
-  "Visualisation des montants en temps réel",
-  "Interfaçage bureautique (Word, Excel)",
-  "Gestion des engagements",
+  "Multi-imputation (fonctionnelle & analytique)",
   "Gestion des tiers pluri-budgétaire",
-  "Multi-imputation",
+  "Pluriannualité AP/CP & AE/CP",
   "Pré-mandatement automatique",
-  "Moteur de graphiques intégré",
+  "Nomenclatures M14, M22, M41-M49, M52",
+  "Historiques synthétiques & pluriannuels",
+  "Interfaçage bureautique (Word, Excel, Calc)",
+  "Moteur de graphiques & ratios intégrés",
   "Éditions PDF / Mail / HTML",
 ];
 
 const editionsItems = [
-  { icon: Award, label: "Éditions FCTVA" },
-  { icon: Printer, label: "Bons de commande" },
+  { icon: Award, label: "Éditions FCTVA automatisées" },
+  { icon: Printer, label: "Bons de commande & bordereaux" },
   { icon: LayoutGrid, label: "Moteur d'éditions personnalisables" },
-  { icon: BarChart3, label: "Balances graphiques" },
-  { icon: FileBarChart, label: "Maquettes budgétaires officielles" },
-  { icon: PieChart, label: "Répartition analytique" },
+  { icon: BarChart3, label: "Balances graphiques & comparatives" },
+  { icon: FileBarChart, label: "Maquettes officielles (BP, BS, CA, DM)" },
+  { icon: PieChart, label: "Répartition analytique multi-niveaux" },
   { icon: Mail, label: "Export PDF / HTML / Mail" },
-  { icon: Download, label: "Mise à jour par internet" },
-  { icon: Database, label: "Plan comptable actualisé automatiquement" },
-  { icon: Share2, label: "Tableaux de bord & partage des états" },
+  { icon: Download, label: "Mise à jour réglementaire par internet" },
+  { icon: Database, label: "Plan comptable & fichier des banques actualisés" },
+  { icon: Share2, label: "Tableaux de bord préconfigurés & partage" },
 ];
 
 /* ─── component ─── */
@@ -183,10 +186,10 @@ const Comptabilite = () => (
             Comptabilité &amp; <span className="text-accent">Finance</span>
           </h1>
           <p className="mt-6 max-w-lg text-lg text-primary-foreground/80 leading-[1.8]">
-            Une solution complète pour piloter les finances des collectivités locales, conforme à la réglementation en vigueur.
+            Une solution complète pour piloter les finances des collectivités locales, conforme aux nomenclatures M14, M22, M41 à M49 et M52.
           </p>
           <p className="mt-3 max-w-lg text-base text-primary-foreground/60 leading-[1.8]">
-            Gestion en temps réel des dépenses et recettes, conformité réglementaire et intégration native avec les modules Paie, Emprunts, Amortissements et Gestion des biens.
+            Gestion en temps réel des dépenses et recettes, pluriannualité AP/CP et AE/CP, conformité réglementaire automatique et intégration native avec les modules Paie, Emprunts, Amortissements et Gestion des biens.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
