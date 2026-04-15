@@ -50,13 +50,16 @@ const Index = () => (
       <div className="container relative grid items-center gap-12 lg:grid-cols-2">
         <motion.div {...fadeUp}>
           <span className="inline-block rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-xs font-semibold text-accent mb-6">
-            Logiciels pour collectivités
+            Expert des logiciels pour collectivités en Nouvelle-Calédonie
           </span>
-          <h1 className="text-4xl font-bold leading-tight text-primary-foreground md:text-5xl lg:text-6xl">
-            Des solutions <span className="text-accent">numériques</span> pour vos collectivités
+          <h1 className="text-4xl font-bold leading-[1.15] text-primary-foreground md:text-5xl lg:text-6xl">
+            Logiciels métiers pour collectivités en <span className="text-accent">Nouvelle-Calédonie</span>
           </h1>
-          <p className="mt-6 max-w-lg text-lg text-primary-foreground/70 leading-relaxed">
-            BFC accompagne les collectivités de Nouvelle-Calédonie avec des logiciels adaptés, un support de proximité et une expertise reconnue.
+          <p className="mt-6 max-w-lg text-lg text-primary-foreground/80 leading-[1.8]">
+            Des solutions complètes pour gérer votre collectivité&nbsp;: comptabilité, administrés, état civil, élections et plus encore.
+          </p>
+          <p className="mt-3 max-w-lg text-base text-primary-foreground/60 leading-[1.8]">
+            BFC accompagne les collectivités avec des logiciels adaptés à la législation locale et un support de proximité.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
