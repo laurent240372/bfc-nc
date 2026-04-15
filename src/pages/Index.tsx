@@ -56,7 +56,7 @@ const Index = () => (
             Logiciels métiers pour collectivités en <span className="text-accent">Nouvelle-Calédonie</span>
           </h1>
           <p className="mt-6 max-w-lg text-lg text-primary-foreground/80 leading-[1.8]">
-            Des solutions complètes pour gérer votre collectivité&nbsp;: comptabilité, administrés, état civil, élections et plus encore.
+            Des solutions complètes pour la gestion des collectivités&nbsp;: comptabilité, administrés, état civil et gestion quotidienne.
           </p>
           <p className="mt-3 max-w-lg text-base text-primary-foreground/60 leading-[1.8]">
             BFC accompagne les collectivités avec des logiciels adaptés à la législation locale et un support de proximité.
