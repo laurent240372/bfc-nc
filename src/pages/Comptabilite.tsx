@@ -47,7 +47,7 @@ import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import heroImg from "@/assets/compta-hero.png";
 import dematImg from "@/assets/compta-demat.jpg";
-import pilotageImg from "@/assets/compta-pilotage.jpg";
+import pilotageImg from "@/assets/compta-pilotage.png";
 
 /* ─── animation helper ─── */
 const fadeUp = {
