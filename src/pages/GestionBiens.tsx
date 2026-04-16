@@ -167,9 +167,9 @@ const GestionBiens = () => (
           <img
             src={heroImg}
             alt="Interface Gestion des biens BFC"
-            loading="lazy"
+            loading="eager"
             decoding="async"
-            className="w-full max-w-[600px] lg:max-w-none lg:w-[110%] drop-shadow-[0_20px_50px_rgba(0,0,0,0.4)]"
+            className="w-full max-w-[700px] lg:max-w-none lg:w-[140%] drop-shadow-[0_25px_60px_rgba(0,0,0,0.5)]"
           />
         </motion.div>
       </div>
