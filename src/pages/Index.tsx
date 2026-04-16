@@ -18,11 +18,11 @@ import imgRegie from "@/assets/modules/regie.jpg";
 import imgFacturationEnfance from "@/assets/modules/facturation-enfance.jpg";
 
 const financeModules = [
-  { title: "Comptabilité", image: imgComptabilite, desc: "Gestion en temps réel des finances, conforme aux nomenclatures M14, M22, M4x et M1-5-7. Budget, mandatement, titres de recettes et suivi financier complet." },
-  { title: "Gestion des biens", image: imgGestionBiens, desc: "Suivi complet du patrimoine mobilier et immobilier de la collectivité. Gestion des amortissements, inventaire et transmission à la Trésorerie." },
-  { title: "Tableaux de bord", image: imgTableauxBord, desc: "Indicateurs stratégiques et pluriannuels pour piloter votre collectivité. Analyse des données financières et suivi des ratios." },
-  { title: "Emprunts & dette", image: imgEmprunts, desc: "Gestion et simulation des emprunts selon les normes M14, M22, M4x et M1-5-7. Suivi de l'endettement et analyse de son évolution." },
-  { title: "Paie", image: imgPaie, desc: "Gestion complète des agents : bulletins de salaire, congés et carrière. Éditions réglementaires (CAFAT, mutuelle, DADS…) et mandatement automatique." },
+  { title: "Comptabilité", image: imgComptabilite, desc: "Gestion en temps réel des finances, conforme aux nomenclatures M14, M22, M4x et M1-5-7. Budget, mandatement, titres de recettes et suivi financier complet.", link: "/logiciels/comptabilite" },
+  { title: "Gestion des biens", image: imgGestionBiens, desc: "Suivi complet du patrimoine mobilier et immobilier de la collectivité. Gestion des amortissements, inventaire et transmission à la Trésorerie.", link: "/logiciels/gestion-biens" },
+  { title: "Tableaux de bord", image: imgTableauxBord, desc: "Indicateurs stratégiques et pluriannuels pour piloter votre collectivité. Analyse des données financières et suivi des ratios.", link: "/logiciels/tableaux-bord" },
+  { title: "Emprunts & dette", image: imgEmprunts, desc: "Gestion et simulation des emprunts selon les normes M14, M22, M4x et M1-5-7. Suivi de l'endettement et analyse de son évolution.", link: "/logiciels/emprunts" },
+  { title: "Paie", image: imgPaie, desc: "Gestion complète des agents : bulletins de salaire, congés et carrière. Éditions réglementaires (CAFAT, mutuelle, DADS…) et mandatement automatique.", link: "/logiciels/paie" },
 ];
 
 const administresModules = [
@@ -127,22 +127,23 @@ const Index = () => (
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-6">
               {financeModules.map((m, i) => (
-                <motion.div
-                  key={m.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="group rounded-xl border border-border bg-background overflow-hidden card-hover cursor-pointer"
-                >
-                  <div className="aspect-[3/2] overflow-hidden">
-                    <img src={m.image} alt={m.title} loading="lazy" width={768} height={512} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-                  </div>
-                   <div className="p-4">
-                    <h4 className="font-bold text-sm text-foreground mb-1.5">{m.title}</h4>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
-                  </div>
-                </motion.div>
+                <Link key={m.title} to={m.link}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.08 }}
+                    className="group rounded-xl border border-border bg-background overflow-hidden card-hover cursor-pointer transition-shadow hover:shadow-lg"
+                  >
+                    <div className="aspect-[3/2] overflow-hidden">
+                      <img src={m.image} alt={m.title} loading="lazy" width={768} height={512} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    </div>
+                    <div className="p-4">
+                      <h4 className="font-bold text-sm text-foreground mb-1.5">{m.title}</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
+                    </div>
+                  </motion.div>
+                </Link>
               ))}
             </div>
             <Link to="/logiciels" className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
