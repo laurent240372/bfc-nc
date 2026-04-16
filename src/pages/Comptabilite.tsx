@@ -47,7 +47,7 @@ import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import heroImg from "@/assets/compta-hero.png";
 import dematImg from "@/assets/compta-demat.jpg";
-import pilotageImg from "@/assets/compta-pilotage.jpg";
+import pilotageImg from "@/assets/compta-pilotage.png";
 
 /* ─── animation helper ─── */
 const fadeUp = {
@@ -314,10 +314,8 @@ const Comptabilite = () => (
     {/* ───── 5. PILOTAGE ET ORGANISATION ───── */}
     <section className="bg-muted py-20 md:py-28">
       <div className="container grid items-center gap-12 lg:grid-cols-2">
-        <motion.div {...fadeUp} transition={{ delay: 0.1 }}>
-          <div className="overflow-hidden rounded-xl border border-border shadow-lg">
-            <img src={pilotageImg} alt="Tableaux de bord financiers" loading="lazy" width={800} height={512} className="w-full" />
-          </div>
+        <motion.div {...fadeUp} transition={{ delay: 0.1 }} className="flex items-center justify-center">
+          <img src={pilotageImg} alt="Tableaux de bord financiers" loading="lazy" width={800} height={512} className="w-full max-w-[700px] drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]" />
         </motion.div>
         <motion.div {...fadeUp}>
           <SectionHeading
