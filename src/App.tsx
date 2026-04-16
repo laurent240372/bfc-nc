@@ -8,6 +8,7 @@ import Societe from "./pages/Societe";
 import Logiciels from "./pages/Logiciels";
 import Comptabilite from "./pages/Comptabilite";
 import Administres from "./pages/Administres";
+import GestionBiens from "./pages/GestionBiens";
 import Formations from "./pages/Formations";
 import Services from "./pages/Services";
 import Partenaires from "./pages/Partenaires";
