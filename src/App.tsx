@@ -9,6 +9,7 @@ import Logiciels from "./pages/Logiciels";
 import Comptabilite from "./pages/Comptabilite";
 import Administres from "./pages/Administres";
 import GestionBiens from "./pages/GestionBiens";
+import Emprunts from "./pages/Emprunts";
 import Formations from "./pages/Formations";
 import Services from "./pages/Services";
 import Partenaires from "./pages/Partenaires";
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/logiciels" element={<Logiciels />} />
           <Route path="/logiciels/comptabilite" element={<Comptabilite />} />
           <Route path="/logiciels/gestion-des-biens" element={<GestionBiens />} />
+          <Route path="/logiciels/emprunts" element={<Emprunts />} />
           <Route path="/logiciels/administres" element={<Administres />} />
           <Route path="/formations" element={<Formations />} />
           <Route path="/services" element={<Services />} />
