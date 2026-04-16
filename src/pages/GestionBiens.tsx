@@ -30,7 +30,7 @@ import {
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
-import heroImg from "@/assets/gestion-biens-hero.jpg";
+import heroImg from "@/assets/gestion-biens-hero.png";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -163,8 +163,8 @@ const GestionBiens = () => (
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="overflow-hidden rounded-xl border border-primary-foreground/10 shadow-2xl">
-            <img src={heroImg} alt="Interface Gestion des biens BFC" width={1280} height={720} className="w-full" />
+          <div className="overflow-hidden rounded-xl border border-primary-foreground/10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)]">
+            <img src={heroImg} alt="Interface Gestion des biens BFC" width={1280} height={720} loading="lazy" decoding="async" className="w-full" />
           </div>
         </motion.div>
       </div>
