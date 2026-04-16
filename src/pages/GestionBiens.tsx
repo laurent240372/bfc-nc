@@ -162,8 +162,16 @@ const GestionBiens = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
+          className="lg:-mr-8 lg:scale-110"
+          style={{ transformOrigin: "center right" }}
         >
-          <div className="overflow-hidden rounded-xl border border-primary-foreground/10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)]">
+          <div
+            className="overflow-hidden rounded-xl"
+            style={{
+              boxShadow: "0 25px 80px -20px rgba(0,0,0,0.45), 0 0 40px -10px rgba(59,130,246,0.2)",
+              transform: "perspective(1200px) rotateY(-2deg)",
+            }}
+          >
             <img src={heroImg} alt="Interface Gestion des biens BFC" width={1280} height={720} loading="lazy" decoding="async" className="w-full" />
           </div>
         </motion.div>
