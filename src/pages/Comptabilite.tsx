@@ -211,10 +211,15 @@ const Comptabilite = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex items-center justify-center lg:justify-end"
         >
-          <div className="overflow-hidden rounded-xl border border-primary-foreground/10 shadow-2xl">
-            <img src={heroImg} alt="Dashboard Comptabilité BFC" width={1280} height={720} className="w-full" />
-          </div>
+          <img
+            src={heroImg}
+            alt="Dashboard Comptabilité BFC"
+            loading="eager"
+            decoding="async"
+            className="w-full max-w-[700px] lg:max-w-none lg:w-[140%] drop-shadow-[0_25px_60px_rgba(0,0,0,0.5)]"
+          />
         </motion.div>
       </div>
     </section>
