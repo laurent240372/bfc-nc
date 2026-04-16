@@ -45,7 +45,7 @@ import {
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
-import heroImg from "@/assets/gestion-biens-hero.png";
+import heroImg from "@/assets/compta-hero.png";
 import dematImg from "@/assets/compta-demat.jpg";
 import pilotageImg from "@/assets/compta-pilotage.jpg";
 
