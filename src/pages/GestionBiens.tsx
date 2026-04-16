@@ -30,7 +30,7 @@ import {
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
-import heroImg from "@/assets/gestion-biens-hero.png";
+import heroImg from "@/assets/compta-hero.png";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
