@@ -127,22 +127,23 @@ const Index = () => (
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 mt-6">
               {financeModules.map((m, i) => (
-                <motion.div
-                  key={m.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="group rounded-xl border border-border bg-background overflow-hidden card-hover cursor-pointer"
-                >
-                  <div className="aspect-[3/2] overflow-hidden">
-                    <img src={m.image} alt={m.title} loading="lazy" width={768} height={512} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
-                  </div>
-                   <div className="p-4">
-                    <h4 className="font-bold text-sm text-foreground mb-1.5">{m.title}</h4>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
-                  </div>
-                </motion.div>
+                <Link key={m.title} to={m.link}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.08 }}
+                    className="group rounded-xl border border-border bg-background overflow-hidden card-hover cursor-pointer transition-shadow hover:shadow-lg"
+                  >
+                    <div className="aspect-[3/2] overflow-hidden">
+                      <img src={m.image} alt={m.title} loading="lazy" width={768} height={512} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                    </div>
+                    <div className="p-4">
+                      <h4 className="font-bold text-sm text-foreground mb-1.5">{m.title}</h4>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{m.desc}</p>
+                    </div>
+                  </motion.div>
+                </Link>
               ))}
             </div>
             <Link to="/logiciels" className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline">
