@@ -18,7 +18,6 @@ import {
   ClipboardList,
   Package,
   Building2,
-  Hammer,
   Boxes,
   Landmark,
   Download,
@@ -26,7 +25,6 @@ import {
   Printer,
   Table2,
   Globe,
-  Star,
   Zap,
   Shield,
 } from "lucide-react";
@@ -46,12 +44,12 @@ const integrationCards = [
   {
     icon: Calculator,
     title: "Simulation budgétaire",
-    desc: "Lien direct entre la gestion des amortissements et le moteur de simulation budgétaire via l'état préparatoire budgétaire.",
+    desc: "L'état préparatoire budgétaire permet un lien direct entre la gestion des amortissements et le moteur de simulation budgétaire.",
   },
   {
     icon: Link2,
     title: "Interface Comptabilité",
-    desc: "Récupération et injection directe de l'intégralité des mouvements comptables avec le module Comptabilité.",
+    desc: "En interface permanente avec la Comptabilité, récupération et injection directe de l'intégralité des mouvements comptables.",
   },
   {
     icon: RefreshCw,
@@ -66,30 +64,45 @@ const integrationCards = [
 ];
 
 const assistantItems = [
-  { icon: Wrench, title: "Assistants écritures", desc: "Guides pas à pas pour les écritures spécifiques : cessions avec plus ou moins-values, régularisations." },
-  { icon: Building2, title: "Affermage complet", desc: "Prise en charge automatique de toute la gestion des biens en affermage, du suivi à la comptabilisation." },
-  { icon: FolderTree, title: "Modèles de biens", desc: "Modèles de biens et profils d'amortissements préconfigurés pour accélérer les saisies." },
-  { icon: Zap, title: "Saisies assistées", desc: "Saisies guidées qui garantissent un inventaire toujours à jour et conforme." },
+  {
+    icon: Wrench,
+    title: "Assistants écritures",
+    desc: "Les multiples assistants vous guident sur les écritures spécifiques telles que les cessions avec plus ou moins-values.",
+  },
+  {
+    icon: Building2,
+    title: "Affermage automatique",
+    desc: "Le logiciel prend en charge toute la gestion des biens en affermage : branchez le pilote automatique !",
+  },
+  {
+    icon: FolderTree,
+    title: "Modèles & profils",
+    desc: "Modèles de biens et profils d'amortissements préconfigurés pour accélérer les saisies autrefois longues et fastidieuses.",
+  },
+  {
+    icon: Zap,
+    title: "Saisies assistées",
+    desc: "Les saisies assistées apportent la garantie d'un inventaire toujours à jour et conforme.",
+  },
 ];
 
 const rechercheItems = [
   { icon: Barcode, label: "Étiquetage codes-barres pour identification rapide" },
   { icon: Camera, label: "Fiche inventaire avec photo du bien" },
-  { icon: MapPin, label: "Recherches géolocalisées et cartographie" },
+  { icon: MapPin, label: "Recherches géolocalisées et cartographie des biens" },
   { icon: FolderTree, label: "Regroupements par catégorie, service ou site" },
-  { icon: Search, label: "Recherche sur tous les champs : date, n° d'inventaire, libellé…" },
+  { icon: Search, label: "Interrogation sur tous les champs : date, n° d'inventaire, libellé…" },
 ];
 
 const fonctionnalites = [
   "Gestion centralisée de l'inventaire et de l'amortissement",
   "Gestion des subventions à amortir liée aux biens",
-  "Calcul automatique du tableau d'amortissement modifiable ligne par ligne",
+  "Calcul automatique du tableau d'amortissement, modifiable ligne par ligne",
   "Différenciation budget de reprise / budget en cours",
   "Liaison Trésorerie via Indigo Inventaire et PES",
   "Gestion des biens de faible valeur",
   "Gestion des travaux en cours",
   "Gestion des lots et des adjonctions",
-  "Gestion des biens en affermage",
 ];
 
 const editionsItems = [
@@ -100,16 +113,14 @@ const editionsItems = [
   { icon: Shield, label: "État de contrôle de l'inventaire" },
   { icon: Landmark, label: "Historique de l'inventaire" },
   { icon: Calculator, label: "Échéancier des amortissements" },
-  { icon: Table2, label: "Export Excel" },
-  { icon: Mail, label: "Export e-mail, HTML, XML et PDF" },
 ];
 
 const plusItems = [
   { icon: Globe, title: "Interfaces On-Line", desc: "Interfaces On-Line avec les éditions budgétaires pour un suivi en temps réel." },
-  { icon: Download, title: "Mise à jour par Internet", desc: "Mise à jour automatique des jeux d'écritures spécifiques via Internet." },
+  { icon: Download, title: "Mise à jour Internet", desc: "Mise à jour par Internet des jeux d'écritures spécifiques." },
   { icon: Table2, title: "Export Excel", desc: "Export de chaque tableau dans Excel pour une exploitation libre des données." },
-  { icon: Camera, title: "Fiche inventaire enrichie", desc: "Fiche inventaire avec photo du bien et code-barres intégré." },
-  { icon: Printer, title: "Éditions multi-formats", desc: "Toutes les éditions exportables au format e-mail, HTML, XML et PDF." },
+  { icon: Camera, title: "Fiche inventaire enrichie", desc: "Fiche inventaire avec photo du bien et code-barre intégré." },
+  { icon: Printer, title: "Exports multi-formats", desc: "Toutes les éditions exportables au format e-mail, HTML, XML et PDF." },
 ];
 
 const GestionBiens = () => (
@@ -129,7 +140,7 @@ const GestionBiens = () => (
             Le suivi complet du patrimoine mobilier et immobilier des collectivités, depuis le calcul des amortissements jusqu'à l'inventaire transmis à la Trésorerie.
           </p>
           <p className="mt-3 max-w-lg text-base text-primary-foreground/60 leading-[1.8]">
-            Intégré nativement avec la Comptabilité, le module Gestion des biens assure le suivi patrimonial, le calcul des amortissements, l'étiquetage codes-barres et la géolocalisation des biens.
+            En interface permanente avec la Comptabilité, le module assure la gestion des amortissements, la fiabilité de l'inventaire et l'intégration complète dans la chaîne financière.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
@@ -164,8 +175,8 @@ const GestionBiens = () => (
       <div className="container">
         <SectionHeading
           badge="Gestion intégrée"
-          title="Une gestion patrimoniale intégrée"
-          description="Lien direct entre les amortissements, la simulation budgétaire et la comptabilité pour une chaîne financière sans rupture."
+          title="Un système de gestion financière totalement intégré"
+          description="Lien direct entre amortissements, simulation budgétaire et comptabilité pour une chaîne financière sans rupture."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {integrationCards.map((c, i) => (
@@ -186,13 +197,13 @@ const GestionBiens = () => (
       </div>
     </section>
 
-    {/* ───── 3. ASSISTANTS ET AUTOMATISATION ───── */}
+    {/* ───── 3. AUTOMATISATION & TRAITEMENTS ───── */}
     <section className="bg-muted py-20 md:py-28">
       <div className="container">
         <SectionHeading
           badge="Automatisation"
-          title="Assistants & automatisation"
-          description="Gain de temps et sécurisation des traitements grâce aux assistants, modèles et profils préconfigurés."
+          title="Automatisation & traitements"
+          description="Moins de travail au quotidien grâce aux assistants, modèles et profils préconfigurés."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {assistantItems.map((a, i) => (
@@ -213,13 +224,13 @@ const GestionBiens = () => (
       </div>
     </section>
 
-    {/* ───── 4. RECHERCHE ET LOCALISATION ───── */}
+    {/* ───── 4. SUIVI & RECHERCHE DES BIENS ───── */}
     <section className="py-20 md:py-28">
       <div className="container">
         <SectionHeading
           badge="Recherche"
-          title="Recherche & localisation des biens"
-          description="Codes-barres, photos, géolocalisation et recherches avancées : retrouvez n'importe quel bien en un instant."
+          title="Suivi & recherche des biens"
+          description="Codes-barres, photos, géolocalisation et recherches avancées : retrouver un bien devient un véritable jeu d'enfant !"
         />
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {rechercheItems.map((r, i) => (
@@ -244,7 +255,7 @@ const GestionBiens = () => (
       <div className="container">
         <SectionHeading
           badge="Fonctionnalités"
-          title="Fonctionnalités clés"
+          title="Les fonctions de base"
         />
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {fonctionnalites.map((f, i) => (
@@ -262,15 +273,15 @@ const GestionBiens = () => (
       </div>
     </section>
 
-    {/* ───── 6. ÉDITIONS ET EXPORTS ───── */}
+    {/* ───── 6. ÉDITIONS & CONFORMITÉ ───── */}
     <section className="py-20 md:py-28">
       <div className="container">
         <SectionHeading
           badge="Éditions"
-          title="Éditions & exports"
-          description="Des éditions réglementaires complètes et des exports multi-formats pour une exploitation libre de vos données."
+          title="Éditions & conformité"
+          description="Des éditions réglementaires complètes pour une gestion patrimoniale transparente et conforme."
         />
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {editionsItems.map((e, i) => (
             <motion.div
               key={e.label}
@@ -288,7 +299,7 @@ const GestionBiens = () => (
       </div>
     </section>
 
-    {/* ───── 7. LES PLUS ───── */}
+    {/* ───── 7. LES + ───── */}
     <section className="bg-muted py-20 md:py-28">
       <div className="container">
         <SectionHeading
@@ -320,10 +331,10 @@ const GestionBiens = () => (
       <div className="container text-center">
         <motion.div {...fadeUp}>
           <h2 className="text-3xl font-bold text-primary-foreground md:text-4xl">
-            Optimisez le suivi de votre patrimoine
+            Optimisez la gestion de votre patrimoine
           </h2>
           <p className="mt-4 max-w-lg mx-auto text-primary-foreground/70 leading-relaxed">
-            Découvrez comment le module Gestion des biens simplifie l'inventaire, les amortissements et la gestion patrimoniale de votre collectivité.
+            Découvrez comment le module Gestion des biens simplifie l'inventaire, les amortissements et le suivi patrimonial de votre collectivité.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
