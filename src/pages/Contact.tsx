@@ -106,26 +106,34 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Téléphone</h3>
-                  <p className="text-sm text-muted-foreground">+687 28 XX XX</p>
+                  <p className="text-sm text-muted-foreground">(687) 43 21 62</p>
                   <p className="text-xs text-muted-foreground mt-1">Lun - Ven : 7h30 - 16h30</p>
                 </div>
               </div>
+
               <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-5">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-light shrink-0">
                   <Mail className="h-5 w-5 text-accent" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Email</h3>
-                  <p className="text-sm text-muted-foreground">contact@bfc.nc</p>
+                  <p className="text-sm text-muted-foreground">assistance@bfc.nc</p>
                 </div>
               </div>
+
               <div className="flex items-start gap-4 rounded-xl border border-border bg-card p-5">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-light shrink-0">
                   <MapPin className="h-5 w-5 text-accent" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Adresse</h3>
-                  <p className="text-sm text-muted-foreground">Nouméa, Nouvelle-Calédonie</p>
+                  <div className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                    <p>14 rue Théodore Monod</p>
+                    <p>Immeuble Arbé</p>
+                    <p>BP 1519</p>
+                    <p>98830 Dumbéa</p>
+                    <p>Nouvelle-Calédonie</p>
+                  </div>
                 </div>
               </div>
             </div>

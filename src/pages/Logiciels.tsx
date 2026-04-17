@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Calculator, Users, ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
-import dashboardHero from "@/assets/dashboard-hero.jpg";
+import dashboardHero from "@/assets/dashboard-hero.png";
 import dashboardAdmin from "@/assets/dashboard-administres.jpg";
 
 const fadeUp = {

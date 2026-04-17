@@ -127,50 +127,71 @@ const GestionBiens = () => (
   <Layout>
     {/* ───── 1. HERO ───── */}
     <section className="relative overflow-hidden bg-navy-gradient py-20 md:py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(217_91%_60%/0.15),transparent_60%)]" />
-      <div className="container relative grid items-center gap-12 lg:grid-cols-2">
-        <motion.div {...fadeUp}>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(217_91%_60%/0.18),transparent_55%)]" />
+      <div className="absolute right-[-120px] top-1/2 hidden h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-accent/20 blur-3xl lg:block" />
+
+      <div className="container relative grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_1.1fr]">
+        <motion.div {...fadeUp} className="max-w-xl">
           <span className="inline-block rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-xs font-semibold text-accent mb-6">
             Module Patrimoine
           </span>
-          <h1 className="text-4xl font-bold leading-[1.15] text-primary-foreground md:text-5xl lg:text-6xl">
+
+          <h1 className="max-w-[11ch] text-4xl font-bold leading-[1.05] tracking-tight text-primary-foreground md:text-5xl lg:text-6xl">
             Gestion des <span className="text-accent">biens</span>
           </h1>
+
           <p className="mt-6 max-w-lg text-lg text-primary-foreground/80 leading-[1.8]">
-            Le suivi complet du patrimoine mobilier et immobilier des collectivités, depuis le calcul des amortissements jusqu'à l'inventaire transmis à la Trésorerie.
+            Le suivi complet du patrimoine mobilier et immobilier des collectivités, depuis le calcul des amortissements jusqu&apos;à l&apos;inventaire transmis à la Trésorerie.
           </p>
+
           <p className="mt-3 max-w-lg text-base text-primary-foreground/60 leading-[1.8]">
-            En interface permanente avec la Comptabilité, le module assure la gestion des amortissements, la fiabilité de l'inventaire et l'intégration complète dans la chaîne financière.
+            En interface permanente avec la Comptabilité, le module assure la gestion des amortissements, la fiabilité de l&apos;inventaire et l&apos;intégration complète dans la chaîne financière.
           </p>
+
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-all hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-all hover:opacity-90"
             >
               Demander une démo <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               to="/logiciels"
-              className="inline-flex items-center gap-2 rounded-lg border border-primary-foreground/20 px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary-foreground/10"
+              className="inline-flex items-center gap-2 rounded-xl border border-primary-foreground/20 px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary-foreground/10"
             >
               Tous les modules
             </Link>
           </div>
         </motion.div>
+
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex items-center justify-center lg:justify-end"
+          className="relative flex items-center justify-center lg:justify-end lg:pl-8 xl:pl-12"
         >
-          <img
-            src={heroImg}
-            alt="Interface Gestion des biens BFC"
-            loading="eager"
-            decoding="async"
-            className="w-full max-w-[700px] lg:max-w-none lg:w-[140%] drop-shadow-[0_25px_60px_rgba(0,0,0,0.5)]"
-          />
+          <div className="absolute right-[8%] top-[10%] hidden rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white/90 backdrop-blur-md lg:block z-20">
+            Inventaire conforme
+          </div>
+
+          <div className="absolute left-[8%] top-[62%] hidden rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white/90 backdrop-blur-md lg:block z-20">
+            Amortissements automatisés
+          </div>
+
+          <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_center,hsl(217_91%_60%/0.22),transparent_70%)] blur-3xl" />
+
+          <div className="relative z-10 overflow-visible w-full max-w-[560px] lg:max-w-none lg:w-[108%] xl:w-[114%]">
+            <div className="overflow-hidden rounded-2xl border border-primary-foreground/10 bg-white/5 shadow-[0_30px_80px_rgba(4,17,44,0.45)] backdrop-blur-sm">
+              <img
+                src={heroImg}
+                alt="Interface Gestion des biens BFC"
+                loading="eager"
+                decoding="async"
+                className="w-full object-contain"
+              />
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
