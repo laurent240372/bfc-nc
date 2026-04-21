@@ -69,37 +69,37 @@ const administresModules = [
     title: "État civil droit commun",
     image: imgEtatCivil,
     desc: "Naissances, mariages, décès et actes officiels",
-    link: "/logiciels/administres",
+    link: "/logiciels/etat-civil-droit-commun",
   },
   {
     title: "État civil coutumier",
     image: imgEtatCivilCoutumier,
     desc: "Registres coutumiers adaptés au droit local",
-    link: "/logiciels/administres",
+    link: "/logiciels/etat-civil-coutumier",
   },
   {
     title: "Élections",
     image: imgElections,
     desc: "Listes électorales, scrutins et résultats",
-    link: "/logiciels/administres",
+    link: "/logiciels/elections",
   },
   {
     title: "Population",
     image: imgPopulation,
     desc: "Fichier population et gestion des administrés",
-    link: "/logiciels/administres",
+    link: "/logiciels/population",
   },
   {
     title: "Régie",
     image: imgRegie,
     desc: "Encaissements, quittances et suivi des paiements",
-    link: "/logiciels/administres",
+    link: "/logiciels/regie",
   },
   {
     title: "Facturation enfance",
     image: imgFacturationEnfance,
     desc: "Cantine, périscolaire et activités enfance",
-    link: "/logiciels/administres",
+    link: "/logiciels/facturation-enfance",
   },
 ];
 

@@ -10,6 +10,10 @@ import Comptabilite from "./pages/Comptabilite";
 import Administres from "./pages/Administres";
 import GestionBiens from "./pages/GestionBiens";
 import Emprunts from "./pages/Emprunts";
+import TableauxBord from "./pages/TableauxBord";
+import Paye from "./pages/Paye";
+import EtatCivilDroitCommun from "./pages/EtatCivilDroitCommun";
+import EtatCivilCoutumier from "./pages/EtatCivilCoutumier";
 import Formations from "./pages/Formations";
 import Services from "./pages/Services";
 import Partenaires from "./pages/Partenaires";
@@ -32,6 +36,16 @@ const App = () => (
           <Route path="/logiciels/comptabilite" element={<Comptabilite />} />
           <Route path="/logiciels/gestion-des-biens" element={<GestionBiens />} />
           <Route path="/logiciels/emprunts" element={<Emprunts />} />
+          <Route path="/logiciels/tableaux-bord" element={<TableauxBord />} />
+          <Route path="/logiciels/paie" element={<Paye />} />
+          <Route
+            path="/logiciels/etat-civil-droit-commun"
+            element={<EtatCivilDroitCommun />}
+          />
+          <Route
+            path="/logiciels/etat-civil-coutumier"
+            element={<EtatCivilCoutumier />}
+          />
           <Route path="/logiciels/administres" element={<Administres />} />
           <Route path="/formations" element={<Formations />} />
           <Route path="/services" element={<Services />} />
