@@ -54,6 +54,12 @@ const fadeUp = {
   transition: { duration: 0.5 },
 };
 
+const screenshotCard =
+  "relative overflow-hidden rounded-[1.6rem] border border-white/70 bg-white/80 p-3 shadow-[0_30px_90px_rgba(15,60,130,0.24)] backdrop-blur-xl";
+
+const screenshotImg =
+  "w-full rounded-[1.05rem] border border-slate-200/80 object-contain shadow-[0_10px_30px_rgba(15,23,42,0.08)]";
+
 const preuves = [
   {
     icon: Shield,
@@ -205,8 +211,11 @@ const editionsItems = [
 const Comptabilite = () => (
   <Layout>
     <section className="relative overflow-hidden bg-navy-gradient py-20 md:py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(217_91%_60%/0.15),transparent_60%)]" />
-      <div className="container relative grid gap-8 lg:grid-cols-[minmax(0,1fr)_820px] lg:items-start xl:gap-12">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(217_91%_60%/0.28),transparent_58%)]" />
+      <div className="absolute right-[-12rem] top-8 h-[38rem] w-[38rem] rounded-full border border-white/10" />
+      <div className="absolute right-[-7rem] top-24 h-[28rem] w-[28rem] rounded-full border border-white/10" />
+      <div className="absolute left-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_left,hsl(217_91%_60%/0.12),transparent_55%)]" />
+      <div className="container relative grid gap-10 lg:grid-cols-[minmax(0,0.88fr)_minmax(520px,720px)] lg:items-center xl:gap-14">
         <motion.div {...fadeUp} className="relative z-10 max-w-xl pt-2 xl:max-w-2xl lg:pr-6">
           <span className="mb-6 inline-block rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-xs font-semibold text-accent">
             Module Finance
@@ -247,19 +256,21 @@ const Comptabilite = () => (
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="relative flex items-start justify-center lg:justify-end lg:self-start lg:pt-8 xl:pt-10"
+          className="relative flex items-center justify-center lg:justify-end"
         >
-          <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_center,hsl(217_91%_60%/0.22),transparent_70%)] blur-3xl" />
+          <div className="pointer-events-none absolute -inset-8 rounded-full bg-accent/25 blur-[90px]" />
 
-          <div className="relative z-10 overflow-visible w-full max-w-[520px] md:max-w-[700px] lg:max-w-[820px] xl:max-w-[980px]">
-            <div className="overflow-hidden rounded-2xl border border-primary-foreground/10 bg-white/5 shadow-[0_30px_80px_rgba(4,17,44,0.45)] backdrop-blur-sm">
-              <img
-                src={heroImg}
-                alt="Dashboard Comptabilité BFC"
-                loading="eager"
-                decoding="async"
-                className="w-full object-contain"
-              />
+          <div className="relative z-10 w-full max-w-[500px] md:max-w-[650px] lg:max-w-[700px] xl:max-w-[740px]">
+            <div className="rounded-[2rem] bg-gradient-to-br from-white/20 to-white/5 p-3 shadow-[0_35px_100px_rgba(4,17,44,0.50)] ring-1 ring-white/15 backdrop-blur-sm">
+              <div className="overflow-hidden rounded-[1.35rem] bg-white shadow-[0_18px_50px_rgba(0,0,0,0.20)]">
+                <img
+                  src={heroImg}
+                  alt="Dashboard Comptabilité BFC"
+                  loading="eager"
+                  decoding="async"
+                  className="w-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </motion.div>
@@ -306,7 +317,7 @@ const Comptabilite = () => (
               key={c.title}
               {...fadeUp}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="rounded-xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:shadow-md"
+              className="rounded-2xl border border-border/80 bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
             >
               <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-blue-light">
                 <c.icon className="h-5 w-5 text-accent" />
@@ -332,7 +343,7 @@ const Comptabilite = () => (
               key={item.title}
               {...fadeUp}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="rounded-xl border border-border bg-card p-6"
+              className="rounded-2xl border border-border/80 bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
             >
               <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
@@ -342,8 +353,10 @@ const Comptabilite = () => (
       </div>
     </section>
 
-    <section className="bg-muted/40 py-20 md:py-28">
-      <div className="container grid items-center gap-12 lg:grid-cols-2">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50/70 py-20 md:py-28">
+      <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 bg-[radial-gradient(circle,hsl(217_91%_60%/0.16),transparent_65%)]" />
+      <div className="pointer-events-none absolute right-0 top-20 h-[18rem] w-[18rem] bg-[radial-gradient(circle,hsl(217_91%_60%/0.18)_1px,transparent_1px)] [background-size:18px_18px] opacity-40" />
+      <div className="container relative grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
         <motion.div {...fadeUp}>
           <SectionHeading
             badge="Interopérabilité"
@@ -357,7 +370,7 @@ const Comptabilite = () => (
                 key={d.label}
                 {...fadeUp}
                 transition={{ duration: 0.35, delay: i * 0.06 }}
-                className="flex items-start gap-3 rounded-lg border border-border bg-card p-4"
+                className="flex items-start gap-3 rounded-xl border border-border/80 bg-white/85 p-4 shadow-sm backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-blue-light">
                   <d.icon className="h-4 w-4 text-accent" />
@@ -368,15 +381,17 @@ const Comptabilite = () => (
           </div>
         </motion.div>
 
-        <motion.div {...fadeUp} transition={{ delay: 0.2 }}>
-          <div className="overflow-hidden rounded-2xl border border-border shadow-lg">
+        <motion.div {...fadeUp} transition={{ delay: 0.2 }} className="relative">
+          <div className="pointer-events-none absolute -inset-8 rounded-full bg-accent/15 blur-3xl" />
+          <div className="pointer-events-none absolute -right-6 -top-6 h-28 w-28 rounded-full bg-blue-200/50 blur-2xl" />
+          <div className={screenshotCard}>
             <img
               src={dematImg}
               alt="Dématérialisation et PES v2"
               loading="lazy"
               width={800}
               height={512}
-              className="w-full"
+              className={screenshotImg}
             />
           </div>
         </motion.div>
@@ -396,7 +411,7 @@ const Comptabilite = () => (
               key={c.label}
               {...fadeUp}
               transition={{ duration: 0.35, delay: i * 0.05 }}
-              className="flex items-start gap-3 rounded-xl border border-border bg-card p-5"
+              className="flex items-start gap-3 rounded-2xl border border-border/80 bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
             >
               <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-blue-light">
                 <c.icon className="h-4 w-4 text-accent" />
@@ -408,17 +423,22 @@ const Comptabilite = () => (
       </div>
     </section>
 
-    <section className="bg-muted py-20 md:py-28">
-      <div className="container grid items-center gap-12 lg:grid-cols-2">
-        <motion.div {...fadeUp} transition={{ delay: 0.1 }} className="flex items-center justify-center">
-          <img
-            src={pilotageImg}
-            alt="Pilotage financier et tableaux de bord"
-            loading="lazy"
-            width={800}
-            height={512}
-            className="w-full max-w-[700px] drop-shadow-[0_20px_50px_rgba(0,0,0,0.22)]"
-          />
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50/80 via-slate-50 to-white py-20 md:py-28">
+      <div className="pointer-events-none absolute -left-24 bottom-10 h-80 w-80 rounded-full bg-accent/12 blur-3xl" />
+      <div className="container relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+        <motion.div {...fadeUp} transition={{ delay: 0.1 }} className="relative flex items-center justify-center">
+          <div className="pointer-events-none absolute -left-16 top-1/2 h-[28rem] w-[28rem] -translate-y-1/2 rounded-full bg-gradient-to-br from-blue-200/70 to-transparent" />
+          <div className="pointer-events-none absolute -inset-8 rounded-full bg-accent/10 blur-3xl" />
+          <div className={screenshotCard + " max-w-[680px]"}>
+            <img
+              src={pilotageImg}
+              alt="Pilotage financier et tableaux de bord"
+              loading="lazy"
+              width={800}
+              height={512}
+              className={screenshotImg}
+            />
+          </div>
         </motion.div>
 
         <motion.div {...fadeUp}>
@@ -463,7 +483,7 @@ const Comptabilite = () => (
               key={u.label}
               {...fadeUp}
               transition={{ duration: 0.35, delay: i * 0.06 }}
-              className="flex items-start gap-3 rounded-xl border border-border bg-card p-5"
+              className="flex items-start gap-3 rounded-2xl border border-border/80 bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-light">
                 <u.icon className="h-5 w-5 text-accent" />
@@ -512,7 +532,7 @@ const Comptabilite = () => (
                 key={e.label}
                 {...fadeUp}
                 transition={{ duration: 0.35, delay: i * 0.04 }}
-                className="flex items-start gap-3 rounded-xl border border-border bg-card p-5"
+                className="flex items-start gap-3 rounded-2xl border border-border/80 bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
               >
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-blue-light">
                   <e.icon className="h-4 w-4 text-accent" />
