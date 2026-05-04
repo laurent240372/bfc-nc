@@ -126,29 +126,29 @@ const GestionBiens = () => (
     </section>
 
     {/* CTA */}
-<section className="bg-navy-gradient py-20">
-  <div className="container text-center">
-    <motion.div {...fadeUp}>
-      <h2 className="text-3xl font-bold text-primary-foreground md:text-4xl">
-        Simplifiez la gestion de votre patrimoine
-      </h2>
+    <section className="bg-navy-gradient py-20">
+      <div className="container text-center">
+        <motion.div {...fadeUp}>
+          <h2 className="text-3xl font-bold text-primary-foreground md:text-4xl">
+            Simplifiez la gestion de votre patrimoine
+          </h2>
 
-      <p className="mx-auto mt-4 max-w-xl text-primary-foreground/70">
-        Un module complet pour maîtriser vos biens et vos amortissements.
-      </p>
+          <p className="mx-auto mt-4 max-w-xl text-primary-foreground/70">
+            Un module complet pour maîtriser vos biens et vos amortissements.
+          </p>
 
-      <div className="mt-8 flex justify-center">
-        <Link
-          to="/contact"
-          className="inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-3 text-sm font-semibold text-accent-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:opacity-95"
-        >
-          Demander une démonstration
-          <ArrowRight className="h-4 w-4" />
-        </Link>
+          <div className="mt-8 flex justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-xl bg-accent px-8 py-3 text-sm font-semibold text-accent-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:opacity-95"
+            >
+              Demander une démonstration
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </motion.div>
       </div>
-    </motion.div>
-  </div>
-</section>
+    </section>
 
   </Layout>
 );

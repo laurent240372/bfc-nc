@@ -19,6 +19,7 @@ import Services from "./pages/Services";
 import Partenaires from "./pages/Partenaires";
 import Actualites from "./pages/Actualites";
 import Contact from "./pages/Contact";
+import Regie from "./pages/Regie";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/logiciels/emprunts" element={<Emprunts />} />
           <Route path="/logiciels/tableaux-bord" element={<TableauxBord />} />
           <Route path="/logiciels/paie" element={<Paye />} />
+          <Route path="/logiciels/regie" element={<Regie />} />
           <Route
             path="/logiciels/etat-civil-droit-commun"
             element={<EtatCivilDroitCommun />}

@@ -4,27 +4,34 @@ import {
   ArrowRight,
   CheckCircle2,
   Wallet,
-  FileSpreadsheet,
-  BadgeCheck,
-  Briefcase,
-  Building2,
+  Receipt,
+  Landmark,
+  ShieldCheck,
   RefreshCw,
   FileText,
-  ShieldCheck,
-  FolderArchive,
-  Activity,
-  Calculator,
-  Landmark,
-  Receipt,
+  ClipboardList,
+  Printer,
+  Banknote,
+  CreditCard,
+  Coins,
   Send,
+  Users,
+  FolderArchive,
+  Search,
+  BadgeCheck,
+  Building2,
+  TimerReset,
+  FileSpreadsheet,
+  Bell,
+  Ticket,
   Layers,
   Gauge,
   Workflow,
-  TimerReset,
+  Database,
 } from "lucide-react";
 import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
-import heroImg from "@/assets/paye-hero.png";
+import heroImg from "@/assets/regie.png";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -35,76 +42,95 @@ const fadeUp = {
 
 const preuves = [
   {
-    icon: ShieldCheck,
-    title: "Production sécurisée",
-    desc: "Contrôles, validations et traitements structurés.",
+    icon: Wallet,
+    title: "Encaissements",
+    desc: "Reçus, règlements simples ou multiples et suivi des clients.",
   },
   {
-    icon: BadgeCheck,
-    title: "Conformité réglementaire",
-    desc: "Déclarations sociales et états intégrés.",
+    icon: ShieldCheck,
+    title: "Contrôle caisse",
+    desc: "Clôtures journalières, pointages et états de contrôle.",
   },
   {
     icon: Landmark,
-    title: "Lien comptabilité",
-    desc: "Transfert des salaires via flux PES.",
+    title: "Trésorerie",
+    desc: "Remises, versements et transferts réglementaires.",
   },
   {
-    icon: FolderArchive,
-    title: "Documents agents",
-    desc: "Centralisation documentaire et flux Xemelios.",
+    icon: Building2,
+    title: "Collectivités",
+    desc: "Une solution pensée pour les régies locales.",
   },
 ];
 
 const moduleCards = [
   {
-    icon: Briefcase,
-    title: "Gestion des carrières",
-    desc: "Création et suivi des carrières agents avec postes, catégories, services et données administratives.",
+    icon: Receipt,
+    title: "Saisie des encaissements",
+    desc: "Création des reçus, identification du client, produits encaissés et gestion des paiements.",
   },
   {
-    icon: Wallet,
-    title: "Création des bulletins",
-    desc: "Production des bulletins par période, groupe ou sélection d’agents.",
+    icon: Banknote,
+    title: "Clôture de caisse",
+    desc: "Contrôle du numéraire, fonds de caisse, décaissements et éditions de clôture.",
   },
   {
-    icon: RefreshCw,
-    title: "Variables & recalculs",
-    desc: "Ajustement des variables de paie, reports et recalculs immédiats.",
+    icon: CreditCard,
+    title: "Moyens de paiement",
+    desc: "Espèces, chèques, cartes, CESU, tickets et règlements multiples.",
   },
   {
-    icon: BadgeCheck,
-    title: "Validation des salaires",
-    desc: "Clôture, contrôle et validation avant transfert comptable.",
+    icon: ClipboardList,
+    title: "Rôles de facturation",
+    desc: "Intégration des rôles, encaissements, impayés, dégrèvements et suivi complet.",
   },
 ];
 
-const paieBlocks = [
+const beneficesMetier = [
   {
-    title: "Gestion agents & carrières",
+    title: "Sécuriser",
+    desc: "Encadrez les opérations sensibles : encaissement, annulation, clôture et remise.",
+  },
+  {
+    title: "Contrôler",
+    desc: "Disposez d’états journaliers et mensuels pour vérifier l’activité de la régie.",
+  },
+  {
+    title: "Centraliser",
+    desc: "Regroupez clients, reçus, produits, rôles, règlements et éditions dans un même outil.",
+  },
+  {
+    title: "Fluidifier",
+    desc: "Simplifiez les échanges avec la Trésorerie, la comptabilité et les sous-régies.",
+  },
+];
+
+const regieBlocks = [
+  {
+    title: "Utilisation quotidienne",
     items: [
-      "Création et suivi des carrières",
-      "Services, emplois, catégories, grades et échelons",
-      "Informations administratives centralisées",
-      "Suivi RH complémentaire",
+      "Ouverture de la régie et contrôle de la caisse",
+      "Encaissements des administrés au guichet",
+      "Gestion des règlements simples ou multiples",
+      "Réimpression ou annulation encadrée des reçus",
     ],
   },
   {
-    title: "Production de la paie",
+    title: "Clôture & remises",
     items: [
-      "Création des bulletins par période",
-      "Gestion des variables et ajustements",
-      "Recalculs et reports sur périodes suivantes",
-      "Validation et clôture des salaires",
+      "Clôture de caisse journalière",
+      "Décompte physique des espèces",
+      "Remise de chèques et CESU",
+      "Préparation des versements Trésor ou CCP",
     ],
   },
   {
-    title: "Déclarations & comptabilité",
+    title: "Rôles & recouvrement",
     items: [
-      "CAFAT, CLR et mutuelles",
-      "États aux caisses et exports Excel",
-      "Flux PES vers la comptabilité",
-      "Documents agents et Xemelios",
+      "Intégration des rôles de facturation",
+      "Prélèvements automatiques et rejets",
+      "Lettres de rappel",
+      "Transfert des impayés en Trésorerie ou comptabilité",
     ],
   },
 ];
@@ -112,57 +138,89 @@ const paieBlocks = [
 const processSteps = [
   {
     icon: Layers,
-    label: "Créer ou mettre à jour la carrière agent",
+    label: "Paramétrer la régie, les produits et les moyens de paiement",
   },
   {
-    icon: Wallet,
-    label: "Préparer la période et générer les bulletins",
+    icon: Receipt,
+    label: "Saisir les encaissements et éditer les reçus",
   },
   {
     icon: Gauge,
-    label: "Contrôler les variables et valider les salaires",
+    label: "Contrôler, pointer et clôturer la caisse",
   },
   {
     icon: Send,
-    label: "Transmettre vers la comptabilité et les organismes",
+    label: "Transmettre les remises, rôles et états aux partenaires",
   },
 ];
 
-const regulatoryCards = [
+const controleItems = [
+  { icon: ShieldCheck, label: "Contrôle des encaissements journaliers" },
+  { icon: Banknote, label: "Clôture du numéraire et fonds de caisse" },
+  { icon: FileSpreadsheet, label: "États mensuels par type de règlement" },
+  { icon: Printer, label: "Journal de caisse et bordereaux de versement" },
+  { icon: Landmark, label: "Remises Trésor ou CCP" },
+  { icon: Search, label: "Recherche des reçus, clients et factures" },
+  { icon: BadgeCheck, label: "Annulations encadrées et traçables" },
+  { icon: Database, label: "Vérification et épuration des données" },
+];
+
+const fonctionnalites = [
+  "Configuration générale de la régie",
+  "Gestion des produits encaissables",
+  "Gestion des banques et moyens de paiement",
+  "Saisie des encaissements",
+  "Règlements simples ou multiples",
+  "Clôture de caisse journalière",
+  "Remises de chèques et CESU",
+  "États de pointage",
+  "Clôture mensuelle",
+  "Gestion des rôles de facturation",
+  "Prélèvements automatiques",
+  "Lettres de rappel",
+  "Transfert Trésorerie",
+  "Transfert comptabilité",
+  "Gestion client",
+  "Sous-régie",
+  "Vente de tickets",
+  "Outils de maintenance",
+];
+
+const editionsItems = [
+  { icon: FileText, label: "État journalier des reçus" },
+  { icon: CreditCard, label: "État journalier des règlements" },
+  { icon: ClipboardList, label: "Produits globalisés" },
+  { icon: FileSpreadsheet, label: "États mensuels de contrôle" },
+  { icon: Printer, label: "Bordereaux de remise" },
+  { icon: Landmark, label: "Documents de clôture" },
+  { icon: Bell, label: "Lettres de rappel" },
+  { icon: FolderArchive, label: "Archives et extractions CSV" },
+];
+
+const optionsCards = [
   {
-    icon: Receipt,
-    title: "CAFAT",
-    desc: "Génération des fichiers déclaratifs numériques à déposer sur les plateformes dédiées.",
+    icon: Users,
+    title: "Sous-régie",
+    desc: "Échanges d’informations entre régie principale et sous-régies, avec remontée des encaissements.",
   },
   {
-    icon: FileText,
-    title: "CLR",
-    desc: "Production des documents déclaratifs PDF ou numériques selon les besoins.",
+    icon: Ticket,
+    title: "Vente de tickets",
+    desc: "Gestion de produits tickets, impression billetterie et vente rapide au guichet.",
   },
   {
-    icon: Send,
-    title: "Mutuelle",
-    desc: "Bordereaux récapitulatifs et envois associés dans un flux opérationnel.",
+    icon: RefreshCw,
+    title: "Prélèvements",
+    desc: "Émission, gestion des rejets et validation des prélèvements automatiques.",
   },
   {
-    icon: Calculator,
-    title: "États aux caisses",
-    desc: "Éditions récapitulatives, détail par agent et export Excel pour contrôle.",
+    icon: FolderArchive,
+    title: "Maintenance",
+    desc: "Vérification, épuration, archivage et outils de dépannage accompagnés.",
   },
 ];
 
-const highlights = [
-  "Création et suivi des carrières agents",
-  "Production des bulletins de paie",
-  "Variables, recalculs et reports",
-  "Validation et clôture des salaires",
-  "Déclarations CAFAT, CLR et mutuelles",
-  "États aux caisses et exports Excel",
-  "Transfert comptable via flux PES",
-  "Documents agents et Xemelios",
-];
-
-const Paye = () => (
+const Regie = () => (
   <Layout>
     <section className="relative overflow-hidden bg-navy-gradient py-20 md:py-28">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(217_91%_60%/0.28),transparent_58%)]" />
@@ -173,21 +231,21 @@ const Paye = () => (
       <div className="container relative grid gap-10 lg:grid-cols-[minmax(0,0.88fr)_minmax(520px,720px)] lg:items-center xl:gap-14">
         <motion.div {...fadeUp} className="relative z-10 max-w-xl pt-2 xl:max-w-2xl lg:pr-6">
           <span className="mb-6 inline-block rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-xs font-semibold text-accent">
-            Module Paie
+            Gestion des administrés
           </span>
 
           <h1 className="max-w-[12ch] text-4xl font-bold tracking-tight leading-[1.05] text-primary-foreground md:text-5xl lg:max-w-[11ch] lg:text-6xl xl:text-[4.25rem]">
-            Gestion de la <span className="text-accent">paie</span>
+            Régie & <span className="text-accent">encaissements</span>
           </h1>
 
           <p className="mt-6 max-w-lg text-lg leading-[1.8] text-primary-foreground/80">
-            Une solution complète pour gérer les carrières, produire les bulletins,
-            piloter les validations et générer les déclarations réglementaires.
+            Une solution complète pour gérer les encaissements, les reçus, les moyens
+            de paiement, les clôtures de caisse et les remises.
           </p>
 
           <p className="mt-3 max-w-lg text-base leading-[1.8] text-primary-foreground/60">
-            Gestion agents, variables de paie, états réglementaires, transfert PES
-            et suivi documentaire dans un environnement métier dédié aux collectivités.
+            Rôles de facturation, prélèvements, états de contrôle, transferts vers la
+            Trésorerie, sous-régie et vente de tickets dans un environnement métier structuré.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -221,7 +279,7 @@ const Paye = () => (
               <div className="overflow-hidden rounded-[1.35rem] bg-white shadow-[0_18px_50px_rgba(0,0,0,0.20)]">
                 <img
                   src={heroImg}
-                  alt="Logiciel de paie BFC"
+                  alt="Logiciel Régie BFC"
                   loading="eager"
                   decoding="async"
                   className="w-full object-contain"
@@ -263,9 +321,9 @@ const Paye = () => (
     <section className="py-20 md:py-28">
       <div className="container">
         <SectionHeading
-          badge="Fonctionnalités"
-          title="Une couverture métier complète pour la paie"
-          description="Le logiciel accompagne les services dans la gestion quotidienne des agents, des traitements de paie et des obligations déclaratives."
+          badge="Gestion intégrée"
+          title="Un module complet pour la régie"
+          description="Le logiciel couvre les principales opérations quotidiennes : encaissements, clôtures, remises, rôles, états et transferts."
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -290,20 +348,48 @@ const Paye = () => (
     </section>
 
     <section className="bg-muted py-20 md:py-28">
+      <div className="container">
+        <SectionHeading
+          badge="Bénéfices métier"
+          title="Une régie plus sûre, plus claire et plus simple à contrôler"
+          description="Le module structure les opérations sensibles et facilite le travail quotidien du régisseur."
+        />
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {beneficesMetier.map((item, i) => (
+            <motion.div
+              key={item.title}
+              {...fadeUp}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="rounded-2xl border border-border/80 bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md"
+            >
+              <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {item.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50/80 via-slate-50 to-white py-20 md:py-28">
+      <div className="pointer-events-none absolute -left-24 bottom-10 h-80 w-80 rounded-full bg-accent/12 blur-3xl" />
+
       <div className="container relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
         <motion.div {...fadeUp}>
           <SectionHeading
-            badge="Pilotage opérationnel"
-            title="Une chaîne fluide, de l’agent à la Trésorerie"
-            description="La solution structure les carrières, fiabilise les bulletins, sécurise les validations et ouvre naturellement vers la comptabilité."
+            badge="Pilotage"
+            title="Pilotage & organisation"
+            description="Une vision claire de l’activité de la régie, des encaissements, des clôtures et des rôles de facturation."
             center={false}
           />
 
           <div className="space-y-6">
-            {paieBlocks.map((block) => (
+            {regieBlocks.map((block) => (
               <div key={block.title}>
                 <h4 className="mb-2 flex items-center gap-2 font-bold text-foreground">
-                  <Briefcase className="h-4 w-4 text-accent" />
+                  <Receipt className="h-4 w-4 text-accent" />
                   {block.title}
                 </h4>
                 <ul className="space-y-1.5 pl-6">
@@ -325,11 +411,11 @@ const Paye = () => (
         <motion.div {...fadeUp} transition={{ delay: 0.1 }}>
           <div className="rounded-[2rem] border border-border/80 bg-card p-8 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-              Cycle de paie
+              Cycle de traitement
             </p>
 
             <h3 className="mt-4 text-2xl font-bold text-foreground">
-              Un workflow clair et sécurisé
+              Une chaîne complète de l’encaissement au contrôle
             </h3>
 
             <div className="mt-8 space-y-4">
@@ -362,26 +448,25 @@ const Paye = () => (
     <section className="py-20 md:py-28">
       <div className="container">
         <SectionHeading
-          badge="Déclarations & éditions"
-          title="Les obligations réglementaires intégrées au quotidien"
-          description="Le module centralise les productions attendues pour les organismes sociaux et facilite les contrôles avant transmission."
+          badge="Contrôle"
+          title="Clôtures, pointages et états de contrôle"
+          description="Des outils pour sécuriser la journée, contrôler la caisse et préparer les documents attendus."
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {regulatoryCards.map((item, i) => (
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {controleItems.map((c, i) => (
             <motion.div
-              key={item.title}
+              key={c.label}
               {...fadeUp}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="rounded-2xl border border-border/80 bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+              transition={{ duration: 0.35, delay: i * 0.05 }}
+              className="flex items-start gap-3 rounded-2xl border border-border/80 bg-card p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
             >
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-blue-light">
-                <item.icon className="h-5 w-5 text-accent" />
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-blue-light">
+                <c.icon className="h-4 w-4 text-accent" />
               </div>
-              <h3 className="font-bold text-foreground">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {item.desc}
-              </p>
+              <span className="text-sm font-medium leading-relaxed text-foreground">
+                {c.label}
+              </span>
             </motion.div>
           ))}
         </div>
@@ -389,17 +474,46 @@ const Paye = () => (
     </section>
 
     <section className="bg-muted py-20 md:py-28">
+      <div className="container">
+        <SectionHeading
+          badge="Options"
+          title="Rôles, sous-régie, tickets et maintenance"
+          description="Des fonctions complémentaires pour couvrir les organisations plus avancées et les besoins spécifiques."
+        />
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {optionsCards.map((c, i) => (
+            <motion.div
+              key={c.title}
+              {...fadeUp}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="rounded-2xl border border-border/80 bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+            >
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-blue-light">
+                <c.icon className="h-5 w-5 text-accent" />
+              </div>
+              <h3 className="font-bold text-foreground">{c.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {c.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="py-20 md:py-28">
       <div className="container grid gap-10 lg:grid-cols-[1fr_1fr]">
         <div>
           <SectionHeading
             badge="Fonctionnalités clés"
-            title="Les essentiels de la paie"
-            description="Un socle complet pour gérer les agents, produire les bulletins et transmettre les données réglementaires."
+            title="Les essentiels de la régie"
+            description="Les briques indispensables pour gérer les encaissements, les rôles, les clôtures et les contrôles."
             center={false}
           />
 
           <div className="grid gap-3 sm:grid-cols-2">
-            {highlights.map((f, i) => (
+            {fonctionnalites.map((f, i) => (
               <motion.div
                 key={f}
                 {...fadeUp}
@@ -415,20 +529,14 @@ const Paye = () => (
 
         <div>
           <SectionHeading
-            badge="Suivi opérationnel"
-            title="Une paie pensée pour les collectivités"
-            description="Gestion administrative, bulletins, déclarations, documents agents et intégration comptable dans un environnement cohérent."
+            badge="Éditions"
+            title="Éditions & contrôles"
+            description="Un ensemble d’états pour justifier les encaissements, suivre les règlements et préparer les clôtures."
             center={false}
           />
 
-          <div className="grid gap-4">
-            {[
-              { icon: Building2, label: "Cycle complet de la paie" },
-              { icon: ShieldCheck, label: "Contrôles et validations sécurisés" },
-              { icon: Workflow, label: "Processus métier structuré" },
-              { icon: Activity, label: "Suivi RH complémentaire" },
-              { icon: TimerReset, label: "Gain de temps sur les traitements mensuels" },
-            ].map((e, i) => (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {editionsItems.map((e, i) => (
               <motion.div
                 key={e.label}
                 {...fadeUp}
@@ -452,12 +560,12 @@ const Paye = () => (
       <div className="container text-center">
         <motion.div {...fadeUp}>
           <h2 className="text-3xl font-bold text-primary-foreground md:text-4xl">
-            Modernisez la gestion de la paie
+            Demander une démonstration
           </h2>
 
           <p className="mx-auto mt-4 max-w-lg leading-relaxed text-primary-foreground/70">
-            Découvrez une solution métier complète, conçue pour sécuriser les
-            traitements et simplifier le quotidien des équipes.
+            Découvrez comment la solution Régie BFC peut sécuriser les encaissements
+            et simplifier le quotidien de votre collectivité.
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -469,10 +577,10 @@ const Paye = () => (
             </Link>
 
             <Link
-              to="/logiciels/comptabilite"
+              to="/logiciels/administres"
               className="inline-flex items-center gap-2 rounded-xl border border-primary-foreground/20 px-8 py-3 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary-foreground/10"
             >
-              Découvrir la comptabilité
+              Découvrir les administrés
             </Link>
           </div>
         </motion.div>
@@ -481,4 +589,4 @@ const Paye = () => (
   </Layout>
 );
 
-export default Paye;
+export default Regie;

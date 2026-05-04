@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Calculator, Users, ArrowRight, Sparkles } from "lucide-react";
 import Layout from "@/components/Layout";
-import dashboardHero from "@/assets/dashboard-hero.png";
+import dashboardHero from "@/assets/comptaFinance.png";
 import dashboardAdmin from "@/assets/dashboard-administres.jpg";
 
 const fadeUp = {

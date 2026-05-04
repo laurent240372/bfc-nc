@@ -9,6 +9,13 @@ import {
 } from "lucide-react";
 import logoBfc from "@/assets/logo-BFC-FondBlanc.png";
 
+const adresseBfc =
+  "14 rue Théodore Monod, Immeuble Arbé, BP 1519, 98830 Dumbéa, Nouvelle-Calédonie";
+
+const mapsUrl =
+  "https://www.google.com/maps/search/?api=1&query=" +
+  encodeURIComponent(adresseBfc);
+
 const Footer = () => (
   <footer className="relative overflow-hidden bg-navy-gradient text-primary-foreground">
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(217_91%_60%/0.18),transparent_58%)]" />
@@ -146,11 +153,21 @@ const Footer = () => (
               <span>assistance@bfc.nc</span>
             </div>
 
-            <div className="flex items-start gap-3 text-sm text-white/80">
-              <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/10">
-                <MapPin className="h-4 w-4 text-accent" />
+            <a
+              href={mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Voir l’emplacement de BFC sur Google Maps"
+              className="group flex items-start gap-3 rounded-2xl border border-accent/25 bg-accent/10 p-3 text-sm text-white/85 transition-all hover:-translate-y-0.5 hover:border-accent/50 hover:bg-accent/15 hover:shadow-lg hover:shadow-accent/10"
+            >
+              <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-accent text-accent-foreground shadow-lg shadow-accent/25 ring-4 ring-accent/15 transition group-hover:scale-105">
+                <MapPin className="h-5 w-5" />
               </div>
+
               <span className="leading-relaxed">
+                <span className="mb-1 block font-semibold text-white">
+                  Nous localiser
+                </span>
                 14 rue Théodore Monod
                 <br />
                 Immeuble Arbé
@@ -161,7 +178,7 @@ const Footer = () => (
                 <br />
                 Nouvelle-Calédonie
               </span>
-            </div>
+            </a>
           </div>
         </div>
       </div>
